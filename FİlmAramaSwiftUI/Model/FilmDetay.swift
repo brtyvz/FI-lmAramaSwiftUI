@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class FilmDetay:Codable{
+struct FilmDetay : Codable{
     
     let title : String
     let year : String
@@ -19,29 +19,24 @@ class FilmDetay:Codable{
     let poster : String
     let metascore : String
     let imdbRating : String
-    let idbId : String
+    let imdbId : String
     
     
-    private enum CodinKeys : String ,  CodingKey {
-        
-         case title = "Title"
+    private enum CodingKeys : String , CodingKey{
+        case title = "Title"
         case year = "Year"
         case genre = "Genre"
         case director = "Director"
         case writer = "Writer"
         case actors = "Actors"
         case plot = "Plot"
-        case poster = "Poster"
         case awards = "Awards"
+        case poster =  "Poster"
         case metascore = "Metascore"
         case imdbRating = "imdbRating"
         case imdbId = "imdbID"
-        
-        
+    
         
         
     }
-    
-    
-    
 }
